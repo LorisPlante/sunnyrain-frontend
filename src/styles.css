@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "sunny";
+  src: url("../src/assets/font/sunnny.ttf");
+}
+
+@font-face {
+  font-family: "rain";
+  src: url("../src/assets/font/rain.ttf");
+}
+
+.sub-menu:hover div a {
+  @apply w-48;
+}
+
+.leaflet-tile-container {
+  filter: sepia();
+}
+
+.leaflet-popup {
+  bottom: 8px !important;
+}
+
+.home-card {
+  @apply w-80 h-[120px] lg:h-48 rounded-xl flex justify-start items-start flex-col gap-8 bg-background-secondary lg:bg-background hover:bg-background-secondary transition-all duration-300 py-6 px-10;
+}
+
+.home-card svg {
+  @apply transition-all duration-300;
+}
+.home-card span {
+  @apply hidden lg:block;
+}
+
+.home-card:hover svg {
+  @apply transform -translate-y-1/2 w-14 h-14;
+}
+
+.home-card:hover p {
+  @apply tracking-wider;
+}
+
+.home-card:hover span {
+  @apply visible translate-y-0 opacity-100;
+}

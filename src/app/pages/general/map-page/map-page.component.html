@@ -1,0 +1,230 @@
+<div class="w-full">
+  <app-header></app-header>
+  <main class="w-full min-h-screen p-main">
+    <section
+      class="p-section pb-0 flex justify-center items-start text-content gap-6 flex-wrap"
+    >
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            class="h-10 inline-block fill-interaction"
+          >
+            <path
+              d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192h80v56H48V192zm0 104h80v64H48V296zm128 0h96v64H176V296zm144 0h80v64H320V296zm80-48H320V192h80v56zm0 160v40c0 8.8-7.2 16-16 16H320V408h80zm-128 0v56H176V408h96zm-144 0v56H64c-8.8 0-16-7.2-16-16V408h80zM272 248H176V192h96v56z"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl">Date</p>
+        </div>
+        <p class="text-content font-bold text-lg">
+          {{ data?.date + " - " + data?.time }}
+        </p>
+      </div>
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 512"
+            class="h-10 inline-block fill-interaction"
+          >
+            <path
+              d="M288 48c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48V192h40V120c0-13.3 10.7-24 24-24s24 10.7 24 24v72h24c26.5 0 48 21.5 48 48V464c0 26.5-21.5 48-48 48H432 336c-26.5 0-48-21.5-48-48V48zm64 32v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16H368c-8.8 0-16 7.2-16 16zm16 80c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V176c0-8.8-7.2-16-16-16H368zM352 272v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H368c-8.8 0-16 7.2-16 16zm176-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H528zM512 368v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H528c-8.8 0-16 7.2-16 16zM224 160c0 6-1 11-2 16c20 14 34 38 34 64c0 45-36 80-80 80H160V480c0 18-15 32-32 32c-18 0-32-14-32-32V320H80c-45 0-80-35-80-80c0-26 13-50 33-64c-1-5-1-10-1-16c0-53 42-96 96-96c53 0 96 43 96 96z"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl">Ville</p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.city }}</p>
+      </div>
+
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            class="h-10 inline-block fill-interaction"
+          >
+            <path
+              d="M160 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C86.2 332.6 80 349.5 80 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM48 112C48 50.2 98.1 0 160 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S16 447.5 16 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM208 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V208c0-8.8 7.2-16 16-16s16 7.2 16 16V322.7c18.6 6.6 32 24.4 32 45.3z"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl">Température</p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.temp }} °C</p>
+      </div>
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 512"
+            class="h-10 inline-block fill-interaction"
+          >
+            <path
+              d="M294.2 1.2c5.1 2.1 8.7 6.7 9.6 12.1l14.1 84.7 84.7 14.1c5.4 .9 10 4.5 12.1 9.6s1.5 10.9-1.6 15.4l-38.5 55c-2.2-.1-4.4-.2-6.7-.2c-23.3 0-45.1 6.2-64 17.1l0-1.1c0-53-43-96-96-96s-96 43-96 96s43 96 96 96c8.1 0 15.9-1 23.4-2.9c-36.6 18.1-63.3 53.1-69.8 94.9l-24.4 17c-4.5 3.1-10.3 3.8-15.4 1.6s-8.7-6.7-9.6-12.1L98.1 317.9 13.4 303.8c-5.4-.9-10-4.5-12.1-9.6s-1.5-10.9 1.6-15.4L52.5 208 2.9 137.2c-3.2-4.5-3.8-10.3-1.6-15.4s6.7-8.7 12.1-9.6L98.1 98.1l14.1-84.7c.9-5.4 4.5-10 9.6-12.1s10.9-1.5 15.4 1.6L208 52.5 278.8 2.9c4.5-3.2 10.3-3.8 15.4-1.6zM144 208a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM639.9 431.9c0 44.2-35.8 80-80 80H288c-53 0-96-43-96-96c0-47.6 34.6-87 80-94.6l0-1.3c0-53 43-96 96-96c34.9 0 65.4 18.6 82.2 46.4c13-9.1 28.8-14.4 45.8-14.4c44.2 0 80 35.8 80 80c0 5.9-.6 11.7-1.9 17.2c37.4 6.7 65.8 39.4 65.8 78.7z"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl">Météo</p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.desc }}</p>
+      </div>
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="h-10 inline-block fill-interaction"
+          >
+            <path
+              d="M288 32c0 17.7 14.3 32 32 32h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c53 0 96-43 96-96s-43-96-96-96H320c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H384c-17.7 0-32 14.3-32 32zM128 512h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32 14.3-32 32s14.3 32 32 32z"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl">Vent</p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.speed }} km/h</p>
+      </div>
+    </section>
+    <section
+      id="dataToToggle"
+      class="p-section pb-0 pt-4 flex justify-center items-start text-content gap-6 flex-wrap opacity-0 h-0 transition-all duration-300"
+    >
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            class="h-10 inline-block"
+            viewBox="0 0 406 563"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M203 563C315.114 563 406 472.114 406 360C406 286.551 364.369 226.29 305.849 141.584C279.511 103.462 249.753 60.3887 218.831 8.93364C211.693 -2.94331 194.247 -2.9853 187.061 8.86236C157.276 57.9668 128.445 99.71 102.7 136.984C43.0713 223.315 0.000488281 285.674 0.000488281 360C0.000488281 472.114 90.8867 563 203 563ZM94.686 314.79C100.733 321.084 107.911 325.395 116.219 327.724C124.739 330.113 133.112 330.162 141.337 327.87C149.774 325.638 157.109 321.602 163.342 315.763C169.634 309.711 173.975 302.423 176.365 293.897C178.696 285.585 178.717 277.315 176.428 269.087C174.2 260.646 170.062 253.279 164.014 246.986C158.18 240.752 151.002 236.441 142.481 234.052C134.174 231.723 125.801 231.674 117.363 233.907C109.139 236.198 101.88 240.37 95.5879 246.422C89.356 252.261 85.0742 259.337 82.7441 267.649C80.3535 276.174 80.2729 284.657 82.5015 293.098C84.79 301.326 88.8516 308.557 94.686 314.79ZM112.51 420.563C114.502 424.11 117.628 426.481 121.889 427.676C124.445 428.392 127.074 428.44 129.775 427.818C132.478 427.196 134.826 425.785 136.821 423.586L291.696 267.007C293.299 265.388 294.489 263.192 295.266 260.422C296.341 256.585 295.806 252.757 293.661 248.937C291.728 245.177 288.738 242.729 284.69 241.595C282.134 240.878 279.505 240.83 276.804 241.452C274.102 242.074 271.783 243.378 269.848 245.364L115.791 401.483C113.523 403.836 112.001 406.398 111.224 409.168C110.148 413.005 110.577 416.803 112.51 420.563ZM137.901 295.872C133.809 298.173 129.42 298.667 124.734 297.353C120.26 296.098 116.875 293.425 114.575 289.332C112.276 285.239 111.784 280.848 113.099 276.159C114.354 271.684 117.027 268.295 121.119 265.994C125.21 263.693 129.493 263.169 133.966 264.424C138.652 265.738 142.145 268.441 144.444 272.534C146.743 276.627 147.265 280.911 146.01 285.387C144.695 290.076 141.992 293.571 137.901 295.872ZM240.609 423.115C246.716 429.195 254.03 433.43 262.551 435.819C270.859 438.148 279.202 438.303 287.58 436.284C296.017 434.052 303.246 429.987 309.265 424.088C315.557 418.036 319.898 410.747 322.289 402.222C324.679 393.697 324.729 385.32 322.441 377.092C320.425 368.711 316.364 361.48 310.257 355.4C304.209 349.107 297.032 344.796 288.724 342.466C280.203 340.077 271.724 339.999 263.287 342.231C255.122 344.31 247.893 348.375 241.601 354.427C235.369 360.266 231.058 367.448 228.667 375.973C226.277 384.499 226.196 392.982 228.425 401.423C230.713 409.651 234.774 416.881 240.609 423.115ZM283.824 404.196C279.732 406.498 275.45 407.021 270.977 405.767C266.29 404.453 262.797 401.75 260.499 397.657C258.2 393.564 257.708 389.173 259.022 384.484C260.277 380.008 262.95 376.62 267.042 374.319C271.193 371.804 275.612 371.204 280.298 372.518C284.772 373.772 288.128 376.552 290.367 380.858C292.666 384.951 293.188 389.236 291.934 393.711C290.619 398.4 287.916 401.895 283.824 404.196Z"
+              class="fill-interaction"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl">Humidité</p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.humidity }} %</p>
+      </div>
+
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="h-10 inline-block fill-interaction"
+          >
+            <path
+              d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM256 416c35.3 0 64-28.7 64-64c0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3 .2-31.6 12.3L257.9 288c-.6 0-1.3 0-1.9 0c-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm352-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl">Pression</p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.pression }} hPa</p>
+      </div>
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            class="h-10 inline-block fill-interaction"
+          >
+            <path
+              d="M160 64c-26.5 0-48 21.5-48 48V276.5c0 17.3-7.1 31.9-15.3 42.5C86.2 332.6 80 349.5 80 368c0 44.2 35.8 80 80 80s80-35.8 80-80c0-18.5-6.2-35.4-16.7-48.9c-8.2-10.6-15.3-25.2-15.3-42.5V112c0-26.5-21.5-48-48-48zM48 112C48 50.2 98.1 0 160 0s112 50.1 112 112V276.5c0 .1 .1 .3 .2 .6c.2 .6 .8 1.6 1.7 2.8c18.9 24.4 30.1 55 30.1 88.1c0 79.5-64.5 144-144 144S16 447.5 16 368c0-33.2 11.2-63.8 30.1-88.1c.9-1.2 1.5-2.2 1.7-2.8c.1-.3 .2-.5 .2-.6V112zM208 368c0 26.5-21.5 48-48 48s-48-21.5-48-48c0-20.9 13.4-38.7 32-45.3V272c0-8.8 7.2-16 16-16s16 7.2 16 16v50.7c18.6 6.6 32 24.4 32 45.3z"
+            />
+          </svg>
+
+          <p class="text-interaction font-bold text-xl">Ressenti</p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.ressenti }} °C</p>
+      </div>
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            class="h-10 inline-block"
+            viewBox="0 0 510 469"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 449H490M391 228.5L421 199M89 198L120.5 230M20 365H63M447 365H490M146.5 365C146.5 222.5 362 222.5 362 365M254.5 173.5V29M254.5 29L172.5 111M254.5 29L336.5 111"
+              class="stroke-interaction"
+              stroke-width="40"
+              stroke-linecap="round"
+            />
+          </svg>
+
+          <p class="text-interaction font-bold text-xl leading-5">
+            Levé <br />
+            du soleil
+          </p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.sunrise }}</p>
+      </div>
+      <div
+        class="p-4 bg-background-secondary rounded-lg flex flex-col justify-start items-start gap-3 min-h-28 min-w-full sm:min-w-[220px]"
+      >
+        <div class="flex justify-start items-end gap-4 w-full">
+          <svg
+            class="h-10 inline-block"
+            viewBox="0 0 510 460"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 440H490M391 219.5L421 190M89 189L120.5 221M20 356H63M447 356H490M146.5 356C146.5 213.5 362 213.5 362 356M253 20V164.5M253 164.5L335 82.5M253 164.5L171 82.5"
+              class="stroke-interaction"
+              stroke-width="40"
+              stroke-linecap="round"
+            />
+          </svg>
+          <p class="text-interaction font-bold text-xl leading-5">
+            Couché <br />
+            du soleil
+          </p>
+        </div>
+        <p class="text-content font-bold text-lg">{{ data?.sunset }}</p>
+      </div>
+    </section>
+    <section class="w-full flex justify-center items-center">
+      <p
+        (click)="toggleWeatherData()"
+        class="text-interaction-secondary cursor-pointer z-30 hover:underline"
+      >
+        Voir <span *ngIf="!seeMore">plus</span
+        ><span *ngIf="seeMore">moins</span>...
+      </p>
+    </section>
+    <section class="py-4 block w-full">
+      <a
+        href="/historique"
+        class="relative flex justify-center items-center w-36 h-12 mb-2 mx-auto z-[1] border-interaction text-interaction hover:before:bg-interaction hover:text-interaction-secondary border-2 transition-all duration-300 rounded-lg before:absolute before:top-1/2 before:left-1/2 before:transform before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-lg before:w-2 before:h-2 before:transition-all before:duration-300 before:z-[-1] hover:before:w-[103%] hover:before:h-[103%] hover:before:rounded-lg hover:font-bold hover:transform hover:scale-110"
+        >Voir l'historique</a
+      >
+    </section>
+    <section class="p-section pt-0 flex justify-center items-center">
+      <div
+        id="map"
+        class="z-10 w-full sm:w-2/3 h-[450px] sm:min-h-[500px] sm:max-h-[800px] rounded-xl sm:rounded-3xl transition-all duration-300 border-2 border-interaction"
+      ></div>
+    </section>
+  </main>
+</div>

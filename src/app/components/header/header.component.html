@@ -1,0 +1,83 @@
+<nav
+  class="z-40 fixed top-0 left-0 p-4 w-full border-b-2 border-background-secondary flex justify-center items-center flex-col bg-background"
+>
+  <div
+    id="burger"
+    class="z-50 absolute top-4 left-4 w-11 h-11 bg-interaction cursor-pointer rounded-full flex justify-center items-center transform transition duration-300"
+    (click)="toggleMenu()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      fill="#031388"
+      width="28"
+      height="28"
+    >
+      <path
+        d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+      />
+    </svg>
+  </div>
+  <h1 class="text-3xl font-black text-content">
+    <a href="/home"
+      ><img
+        class="w-11 h-11"
+        src="../../../assets/medias/img/svg/logo_SunnyRain.svg"
+        alt="logo SunnyRain"
+        srcset=""
+    /></a>
+  </h1>
+  <ul
+    id="menu"
+    class="h-0 overflow-hidden w-full flex justify-start items-start flex-col gap-2 transition-all duration-300 uppercase font-bold text-2xl text-content"
+  >
+    <li
+      class="w-full sm:w-48 min-h-11 cursor-pointer border-b border-interaction hover:tracking-widest transition-all duration-300 ease-in-out"
+    >
+      <a href="/home" class="block w-full">accueil</a>
+    </li>
+
+    <li
+      class="sub-menu w-full sm:w-48 min-h-11 relative hidden sm:flex justify-start items-start gap-2 border-b border-interaction transition-all duration-300 ease-in-out"
+    >
+      <span
+        class="h-full w-full cursor-pointer hover:tracking-widest transition-all duration-300 ease-in-out"
+        >météo</span
+      >
+      <div
+        class="w-fit absolute top-0 right-0 transform translate-x-full flex justify-start items-start flex-col gap-2 h-24"
+      >
+        <a
+          href="/carte"
+          class="w-0 min-h-11 cursor-pointer overflow-hidden border-b border-interaction hover:tracking-widest transition-all duration-300 ease-in-out"
+          >carte</a
+        >
+        <a
+          href="/historique"
+          class="w-0 min-h-11 cursor-pointer overflow-hidden hover:tracking-widest transition-all duration-300 ease-in-out"
+          >historique</a
+        >
+      </div>
+    </li>
+    <li
+      class="sm:hidden w-full sm:w-48 min-h-11 cursor-pointer border-b border-interaction hover:tracking-widest transition-all duration-300 ease-in-out"
+    >
+      <a href="/carte" class="block w-full">carte</a>
+    </li>
+    <li
+      class="sm:hidden w-full sm:w-48 min-h-11 cursor-pointer border-b border-interaction hover:tracking-widest transition-all duration-300 ease-in-out"
+    >
+      <a href="/historique" class="block w-full">historique</a>
+    </li>
+    <li
+      class="w-full sm:w-48 min-h-11 cursor-pointer border-b border-interaction hover:tracking-widest transition-all duration-300 ease-in-out"
+    >
+      <a href="/profil" class="block w-full">compte</a>
+    </li>
+    <li
+      class="w-full sm:w-48 min-h-11 cursor-pointer hover:tracking-widest transition-all duration-300 ease-in-out"
+    >
+      <a (click)="signOut()" class="block w-full">deconexion</a>
+    </li>
+  </ul>
+</nav>
